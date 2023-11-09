@@ -16,6 +16,8 @@ const config: Config = {
       colors: {
         'main': '#202020',
         'secondary': '#181818',
+        'border': '#282828',
+        'purple': '#f588f9'
       }
     },
   },

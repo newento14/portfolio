@@ -3,6 +3,9 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Explorer from "@/components/Explorer";
+import {Providers} from "@/redux/Provider";
+import Tabs from "@/components/Tabs";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -19,9 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>
+          <Navbar/>
+          <Explorer/>
+          <main>
+            <Tabs/>
+            {children}
+          </main>
+          <Footer/>
+        </Providers>
       </body>
     </html>
   )

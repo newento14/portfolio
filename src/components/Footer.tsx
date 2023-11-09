@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer
-      className="flex justify-between items-center h-[26px] absolute bg-secondary w-full bottom-0 border-t-2 border-gray-700 px-6">
+      className="flex justify-between items-center h-[25px] absolute bg-secondary w-full bottom-[2px] border-t-[3px] border-border px-6">
       <div className="h-full flex gap-x-8">
         <div className="flex justify-center items-center">
           <span className="flex justify-center items-center"><svg stroke="currentColor" fill="currentColor"
