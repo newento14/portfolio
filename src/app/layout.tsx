@@ -1,5 +1,5 @@
 import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
+import {Montserrat} from 'next/font/google'
 import './globals.css'
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,7 +7,10 @@ import Explorer from "@/components/Explorer";
 import {Providers} from "@/redux/Provider";
 import Tabs from "@/components/Tabs";
 
-const inter = Inter({subsets: ['latin']})
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,11 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-sans">
         <Providers>
           <Navbar/>
           <Explorer/>
-          <main>
+          <main className={montserrat.className}>
             <Tabs/>
             {children}
           </main>

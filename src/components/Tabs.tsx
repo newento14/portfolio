@@ -11,7 +11,7 @@ import {redirect} from "next/navigation";
 const map: { [key: string]: string } = {
   '/readme': 'README.md',
   '/works': 'Works.tsx',
-  '/about': 'About.tsx'
+  '/stack': 'Stack.tsx'
 };
 
 const Tabs = () => {

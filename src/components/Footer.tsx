@@ -5,7 +5,7 @@ const Footer = () => {
     <footer
       className="flex justify-between items-center h-[25px] absolute bg-secondary w-full bottom-[2px] border-t-[3px] border-border px-6">
       <div className="h-full flex gap-x-8">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center gap-x-[6px]">
           <span className="flex justify-center items-center"><svg stroke="currentColor" fill="currentColor"
                                                                   strokeWidth="0" viewBox="0 0 24 24"
                                                                   height="1em" width="1em"
