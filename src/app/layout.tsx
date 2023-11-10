@@ -24,17 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans">
-        <Providers>
-          <Navbar/>
-          <Explorer/>
-          <main className={montserrat.className}>
-            <Tabs/>
-            {children}
-          </main>
-          <Footer/>
-        </Providers>
-      </body>
+    <body className="font-sans">
+    <Providers>
+      <Navbar/>
+      <Explorer/>
+      <main className={`${montserrat.className} w-full pl-[300px] pb-[26px] max-md:pl-[230px] max-md:pb-0 max-sm:pl-0`}>
+        <Tabs/>
+        {children}
+      </main>
+      <Footer/>
+    </Providers>
+    </body>
     </html>
   )
 }

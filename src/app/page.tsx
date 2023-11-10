@@ -4,10 +4,14 @@ import hero from '../assets/hero.svg'
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
+import {useDispatch} from "react-redux";
+import {addTab} from "@/redux/reducers/tabsSlice";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   return (
-    <div className="h-[90vh] flex justify-center items-center text-[#d8d5cf] gap-x-16">
+    <div className="h-[90vh] flex max-xl:flex-col max-xl:gap-y-6 justify-center items-center text-[#d8d5cf] gap-x-16">
       <div className="flex flex-col gap-y-4">
         <motion.h1 initial={{y: 50, opacity: 0}}
                    whileInView={{
@@ -28,7 +32,7 @@ export default function Home() {
                    }} className="font-bold text-3xl w-fit">Yuriy Choboda
         </motion.h1>
         <div className="flex gap-x-4 text-[#333333]">
-          <Link href={'/works'}>
+          <Link href={'/works'} onClick={() => dispatch(addTab('/works'))}>
             <motion.div
               initial={{y: 50, opacity: 0}}
               whileInView={{
@@ -45,7 +49,7 @@ export default function Home() {
               See works
             </motion.div>
           </Link>
-          <Link href={'/stack'}>
+          <Link href={'/stack'} onClick={() => dispatch(addTab('/stack'))}>
             <motion.div
               initial={{y: 50, opacity: 0}}
               whileInView={{

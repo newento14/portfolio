@@ -4,7 +4,7 @@ import {Explorer, Search, Git, Debug, Extension} from '../assets/navbar/export'
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col justify-between items-center w-16 bg h-full bg-secondary absolute pb-6 border-r-[3px] border-border">
+    <nav className="flex flex-col max-md:hidden justify-between items-center w-16 bg h-full bg-secondary fixed pb-6 border-r-[3px] border-border">
       <div className="flex flex-col w-full">
         <div className="border-l-2 border-purple h-14 flex justify-center items-center">
           <span className="flex justify-center items-center"><Image src={Explorer} alt="explorer" /></span>

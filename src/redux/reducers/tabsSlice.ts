@@ -11,7 +11,7 @@ const initialState: InitialState = {
 }
 
 export const tabsSlice = createSlice({
-  name: "hui",
+  name: "tabs",
   initialState,
   reducers: {
     addTab: (state, action: PayloadAction<string>) => {
@@ -27,7 +27,6 @@ export const tabsSlice = createSlice({
       }
     },
     setSelectedTab: (state, action: PayloadAction<number>) => {
-      console.log(action.payload)
       return {
         ...state,
         selectedTab: action.payload,

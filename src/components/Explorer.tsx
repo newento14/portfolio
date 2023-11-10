@@ -10,7 +10,7 @@ const Explorer = () => {
   const dispatch = useDispatch()
 
   return (
-    <div className="flex flex-col absolute pt-1 -ml-[6px] pr-1 h-full left-[74px] w-fit bg-secondary text-base">
+    <div className="max-sm:hidden flex flex-col fixed pt-1 max-md:ml-0 max-md:left-0 -ml-[6px] pr-1 h-full left-[74px] w-fit bg-secondary text-base">
       <div className="flex justify-between w-full items-center h-[35px] pl-5">
         <p>Explorer</p>
         <span className="explorer-icon"><Image src={dot} alt="3dots"/></span>

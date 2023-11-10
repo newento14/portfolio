@@ -3,9 +3,9 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default function Page() {
   return (
-    <div className="grid xl: grid-cols-8 lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-3">
+    <div className="flex flex-wrap w-full justify-center py-20 px-6 gap-16 sm:gap-28">
       {projects.map((x, i) => (
-        <ProjectCard delay={0.1 + 0.05 * i} />
+        <ProjectCard delay={0.1 + 0.05 * i} name={x.name} desc={x.desc} />
       ))}
     </div>
   )
