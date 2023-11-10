@@ -11,7 +11,7 @@ export default function Home() {
   const dispatch = useDispatch();
 
   return (
-    <div className="h-[90vh] flex max-xl:flex-col max-xl:gap-y-6 justify-center items-center text-[#d8d5cf] gap-x-16">
+    <div className="h-[90vh] flex max-xl:flex-col max-xl:gap-y-6 justify-center items-center text-[#d8d5cf] gap-x-16 max-sm:gap-x-2">
       <div className="flex flex-col gap-y-4">
         <motion.h1 initial={{y: 50, opacity: 0}}
                    whileInView={{
@@ -45,7 +45,7 @@ export default function Home() {
               whileHover={{scale: 1.07}}
               whileTap={{scale: 0.9}}
               transition={{type: "spring", stiffness: 400, damping: 17}}
-              className="font-semibold text-[#333333] bg-purple w-fit px-8 py-2 rounded-md hover:bg-main hover:text-[#ffffff] border-[2px] border-purple">
+              className="font-semibold text-[#333333] bg-purple w-fit px-8 py-2 rounded-md hover:bg-main hover:text-[#ffffff] border-[2px] border-purple max-sm:px-2">
               See works
             </motion.div>
           </Link>
@@ -62,7 +62,7 @@ export default function Home() {
               whileHover={{scale: 1.07}}
               whileTap={{scale: 0.9}}
               transition={{type: "spring", stiffness: 400, damping: 17}}
-              className="font-semibold text-[#333333] bg-purple w-fit px-8 py-2 rounded-md hover:bg-main hover:text-[#ffffff] border-[2px] border-purple">
+              className="font-semibold text-[#333333] bg-purple w-fit px-8 py-2 rounded-md hover:bg-main hover:text-[#ffffff] border-[2px] border-purple max-sm:px-2">
               See tech stack
             </motion.div>
           </Link>

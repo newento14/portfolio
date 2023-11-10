@@ -14,8 +14,10 @@ const imgUrls = [
   [
     'https://img.shields.io/badge/Next-black?logo=next.js&logoColor=white',
     'https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB',
+    'https://img.shields.io/badge/framer%20motion-%23563D7C.svg?logo=framer&logoColor=white',
     'https://img.shields.io/badge/threejs-black?logo=three.js&logoColor=white',
     'https://img.shields.io/badge/redux-%23563D7C.svg?logo=redux&logoColor=white',
+
   ],
   [
     'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white',
@@ -28,6 +30,11 @@ const imgUrls = [
     'https://img.shields.io/badge/nest.js-%23f1413d.svg?logo=nestjs&logoColor=white',
   ],
   [
+    'https://img.shields.io/badge/postgres-bbb?logo=postgresql&logoColor=white&color=blue',
+    'https://img.shields.io/badge/mysql-bbb?logo=mysql&logoColor=white&color=yellow',
+    'https://img.shields.io/badge/MongoDB-%234ea94b.svg?logo=mongodb&logoColor=white',
+  ],
+  [
     'https://img.shields.io/badge/git-%23F05033.svg?logo=git&logoColor=white',
     'https://img.shields.io/badge/github-%23121011.svg?logo=github&logoColor=white'
   ],
@@ -36,7 +43,7 @@ const imgUrls = [
 
 export default function Page() {
   return (
-    <div className="flex gap-y-8 flex-col text-[#e1dfdb] pt-[35px] justify-center items-center h-[94vh]">
+    <div className="flex gap-y-8 flex-col text-[#e1dfdb] pt-[95px] justify-center items-center h-fit">
       <motion.p initial={{x: 50, opacity: 0}} animate={{x: 0, opacity: 1, transition:{type: 'spring'}}} className="text-2xl font-bold ">TECH STACK:</motion.p>
       <motion.div initial={{opacity: 0}}
                   animate={{
@@ -83,11 +90,21 @@ export default function Page() {
       </motion.div>
       <motion.div
         initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.1}}}
-        className='flex flex-col justify-center items-center text-center'>
-        <p className="text-xl">Version Control:</p>
+        className='flex flex-col justify-center items-center'>
+        <p className="text-xl">Databases:</p>
         <div className="flex flex-wrap gap-x-4 gap-y-4 justify-center items-center mt-2">
           {imgUrls[4].map((x, i) => (
             <TechnologyBlock key={i} img={x} delay={2.15 + 0.1 * i}/>
+          ))}
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.6}}}
+        className='flex flex-col justify-center items-center text-center'>
+        <p className="text-xl">Version Control:</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-4 justify-center items-center mt-2">
+          {imgUrls[5].map((x, i) => (
+            <TechnologyBlock key={i} img={x} delay={2.65 + 0.1 * i}/>
           ))}
         </div>
       </motion.div>

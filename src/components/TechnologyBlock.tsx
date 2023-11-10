@@ -33,7 +33,7 @@ const TechnologyBlock = ({img, delay}: BlockProps) => {
           duration: 0.4
         },
       }}
-      className="h-[26px]"
+      className="h-[32px]"
       src={img}/>
   );
 };
