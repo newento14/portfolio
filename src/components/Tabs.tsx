@@ -26,7 +26,7 @@ const Tabs = () => {
   useEffect(() => {
     function handleResize(e: Event) {
       // @ts-ignore
-      setWindowDimensions({height: e.target.innerHeight, width: e.target.innerWidth })
+      setWindowDimensions({height: e.target.innerHeight, width: e.target.innerWidth})
     }
 
     window.addEventListener('resize', handleResize);
@@ -35,13 +35,19 @@ const Tabs = () => {
 
   return (
     <div className="fixed w-full flex h-[35px] bg-gradient-to-r from-[#2d2d2d] to-[#252526] font-sans z-[100]">
-      {windowDimensions.width < 640 && windowDimensions.width !== 0 && <button onClick={() => setVisible(!visible)}><img className="w-[24px]" src="https://www.svgrepo.com/show/506800/burger-menu.svg" alt='open side menu'/></button>}
+      {windowDimensions.width < 640 && windowDimensions.width !== 0 &&
+          <button onClick={() => setVisible(!visible)}><img className="w-[24px]"
+                                                            src="https://www.svgrepo.com/show/506800/burger-menu.svg"
+                                                            alt='open side menu'/></button>}
       <AnimatePresence>
         {visible && <SideBar setVisible={setVisible} value={true}/>}
       </AnimatePresence>
       {tabs.map((x, i) => (
-        <Link href={x} key={x} onClick={() => dispatch(setSelectedTab(i))}><Tab index={i} fileName={map[x]}
-                                                                                selected={i === selectedTab}/></Link>
+        <Link href={x} key={x} onClick={() => dispatch(setSelectedTab(i))}>
+          <Tab index={i}
+               fileName={map[x]}
+               selected={i === selectedTab}/>
+        </Link>
       ))}
     </div>
   );

@@ -20,7 +20,9 @@ const Explorer = () => {
           <li>
             <div className="flex items-center gap-x-1"><span><Image src={downArrow} alt='close folder'/></span>
               <div className="flex justify-between items-center">
-                <p className="font-semibold">PORTFOLIO</p>
+                <Link href={'/'}>
+                  <p className="font-semibold text-purple">PORTFOLIO</p>
+                </Link>
                 <div className="flex gap-x-1 ml-8">
                   <span className="portfolio-file-icon i"><svg stroke="currentColor" fill="currentColor"
                                                                strokeWidth="0" viewBox="0 0 16 16" height="1em"

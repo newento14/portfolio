@@ -14,10 +14,8 @@ const imgUrls = [
   [
     'https://img.shields.io/badge/Next-black?logo=next.js&logoColor=white',
     'https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB',
-    'https://img.shields.io/badge/framer%20motion-%23563D7C.svg?logo=framer&logoColor=white',
-    'https://img.shields.io/badge/threejs-black?logo=three.js&logoColor=white',
     'https://img.shields.io/badge/redux-%23563D7C.svg?logo=redux&logoColor=white',
-
+    'https://img.shields.io/badge/jest-aa?logo=jest&color=red',
   ],
   [
     'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white',
@@ -28,6 +26,7 @@ const imgUrls = [
     'https://img.shields.io/badge/node.js-6DA55F?logo=node.js&logoColor=white',
     'https://img.shields.io/badge/express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB',
     'https://img.shields.io/badge/nest.js-%23f1413d.svg?logo=nestjs&logoColor=white',
+    'https://img.shields.io/badge/prisma-aa?logo=prisma&logoColor=white&color=%2325258a'
   ],
   [
     'https://img.shields.io/badge/postgres-bbb?logo=postgresql&logoColor=white&color=blue',
@@ -43,8 +42,8 @@ const imgUrls = [
 
 export default function Page() {
   return (
-    <div className="flex gap-y-8 flex-col text-[#e1dfdb] pt-[95px] justify-center items-center h-fit">
-      <motion.p initial={{x: 50, opacity: 0}} animate={{x: 0, opacity: 1, transition:{type: 'spring'}}} className="text-2xl font-bold ">TECH STACK:</motion.p>
+    <div className="flex gap-y-8 flex-col text-[#e1dfdb] pt-[95px] justify-center items-center h-fit px-2">
+      <motion.p initial={{x: 150, opacity: 0}} animate={{x: 0, opacity: 1, transition:{type: 'spring'}}} className="text-2xl font-bold ">TECH STACK:</motion.p>
       <motion.div initial={{opacity: 0}}
                   animate={{
                     opacity: 1,

@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex justify-center items-center pb-4">
-        <a href="https://github.com/newento14"><span className="flex justify-center items-center"><svg stroke="currentColor" fill="currentColor"
+        <a href="https://github.com/newento14" rel="noopener noreferrer" target="_blank" ><span className="flex justify-center items-center"><svg stroke="currentColor" fill="currentColor"
                                                                            strokeWidth="0" viewBox="0 0 16 16"
                                                                            className="hover:fill-fuchsia-700"
                                                                            height="2em" width="2em"
