@@ -4,13 +4,13 @@ import {useEffect, useState} from "react";
 import Text from "@/components/Text";
 
 const phrases = [
-  { text: 'Latest tech', color: '#3498db' }, // Blue
-  { text: 'Beautiful UI', color: '#d7acfd' }, // Red
-  { text: 'Performance', color: '#91f1c7' }, // Green
-  { text: 'Responsiveness', color: '#f39c12' }, // Orange
-  { text: 'Innovative solutions', color: '#9b59b6' }, // Purple
-  { text: 'Interactive features', color: '#1abc9c' }, // Turquoise
-  { text: 'Interesting functionality', color: '#e67e22' }, // Carrot
+  {text: 'Latest tech', color: '#3498db'}, // Blue
+  {text: 'Beautiful UI', color: '#d7acfd'}, // Red
+  {text: 'Performance', color: '#91f1c7'}, // Green
+  {text: 'Responsiveness', color: '#f39c12'}, // Orange
+  {text: 'Innovative solutions', color: '#9b59b6'}, // Purple
+  {text: 'Interactive features', color: '#1abc9c'}, // Turquoise
+  {text: 'Interesting functionality', color: '#e67e22'}, // Carrot
 ];
 
 

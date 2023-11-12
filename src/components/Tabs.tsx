@@ -14,19 +14,34 @@ const map: { [key: string]: string } = {
   '/stack': 'Stack.tsx'
 };
 
+const isClientSide = () => typeof window !== 'undefined';
+
+const getWindowSize = () => {
+  if (isClientSide()) {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  } else {
+    return { innerWidth: 0, innerHeight: 0 };
+  }
+};
+
+
 const Tabs = () => {
   const dispatch = useDispatch();
   const tabs = useTypedSelector(x => x.tabs.tabs);
   const selectedTab = useTypedSelector(x => x.tabs.selectedTab);
 
-  const [windowDimensions, setWindowDimensions] = useState({height: 0, width: 0});
+  const [windowDimensions, setWindowDimensions] = useState({innerWidth: 0, innerHeight: 0});
   const [visible, setVisible] = useState(false);
+
+  console.log(windowDimensions)
 
 
   useEffect(() => {
+    setWindowDimensions(getWindowSize())
     function handleResize(e: Event) {
       // @ts-ignore
-      setWindowDimensions({height: e.target.innerHeight, width: e.target.innerWidth})
+      setWindowDimensions({innerHeight: e.target.innerHeight, innerWidth: e.target.innerWidth})
     }
 
     window.addEventListener('resize', handleResize);
@@ -35,10 +50,10 @@ const Tabs = () => {
 
   return (
     <div className="fixed w-full flex h-[35px] bg-gradient-to-r from-[#2d2d2d] to-[#252526] font-sans z-[100]">
-      {windowDimensions.width < 640 && windowDimensions.width !== 0 &&
-          <button onClick={() => setVisible(!visible)}><img className="w-[24px]"
-                                                            src="https://www.svgrepo.com/show/506800/burger-menu.svg"
-                                                            alt='open side menu'/></button>}
+      {windowDimensions.innerWidth < 640 && windowDimensions.innerWidth !== 0 &&
+        <button onClick={() => setVisible(!visible)}><img className="w-[24px]"
+                                                          src="https://www.svgrepo.com/show/506800/burger-menu.svg"
+                                                          alt='open side menu'/></button>}
       <AnimatePresence>
         {visible && <SideBar setVisible={setVisible} value={true}/>}
       </AnimatePresence>

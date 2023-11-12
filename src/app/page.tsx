@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div
-      className="h-[90vh] flex max-xl:flex-col max-xl:gap-y-6 justify-center items-center text-[#d8d5cf] gap-x-16 max-sm:gap-x-2">
+      className="h-[90vh] flex max-xl:flex-col max-xl:gap-y-6 max-sm:pt-24 justify-center items-center text-[#d8d5cf] gap-x-16 max-sm:gap-x-2">
       <div className="flex flex-col gap-y-4">
         <motion.h1 initial={{y: 50, opacity: 0}}
                    whileInView={{
