@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from "next/link";
 import {useDispatch} from "react-redux";
-import {addTab} from "@/redux/reducers/tabsSlice";
+import {addTab, setSelectedTab} from "@/redux/reducers/tabsSlice";
 import {dot, downArrow, rightArrow} from '../assets/explorer/export'
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ const Explorer = () => {
           <li>
             <div className="flex items-center gap-x-1"><span><Image src={downArrow} alt='close folder'/></span>
               <div className="flex justify-between items-center">
-                <Link href={'/'}>
+                <Link href={'/'} onClick={() => dispatch(setSelectedTab(-1))}>
                   <p className="font-semibold text-purple">PORTFOLIO</p>
                 </Link>
                 <div className="flex gap-x-1 ml-8">
@@ -70,13 +70,13 @@ const Explorer = () => {
                   <p>src</p>
                 </div>
                 <ul className="ml-8">
-                  <li className="text-purple font-semibold cursor-pointer"><Link href={'/stack'}
+                  <li className="text-purple font-semibold cursor-pointer"><Link href={'/skills'}
                                                                                  className="flex items-center gap-x-1"
-                                                                                 onClick={() => dispatch(addTab('/stack'))}><img
+                                                                                 onClick={() => dispatch(addTab('/skills'))}><img
                     className="h-[1.2em]"
                     src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_reactjs.svg"
                     alt="Icon file.jsx" loading="lazy"/>
-                    <p>Stack.tsx</p></Link>
+                    <p>Skills.tsx</p></Link>
                   </li>
                   <li className="text-purple font-semibold cursor-pointer"><Link href={'/works'}
                                                                                  className="flex items-center gap-x-1"

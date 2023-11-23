@@ -11,7 +11,7 @@ import {AnimatePresence} from "framer-motion";
 const map: { [key: string]: string } = {
   '/readme': 'README.md',
   '/works': 'Works.tsx',
-  '/stack': 'Stack.tsx'
+  '/skills': 'Skills.tsx'
 };
 
 const isClientSide = () => typeof window !== 'undefined';

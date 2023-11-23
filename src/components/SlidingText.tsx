@@ -26,7 +26,7 @@ const SlidingText = () => {
       setTimeout(() => {
         setIndex(++i % phrases.length);
         setVisible(true);
-      }, 514)
+      }, 513)
     }, 4000);
 
     return () => {

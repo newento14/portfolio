@@ -12,8 +12,9 @@ const imgUrls = [
     'https://img.shields.io/badge/cpp-build?logo=cplusplus&color=1F5F92',
   ],
   [
-    'https://img.shields.io/badge/Next-black?logo=next.js&logoColor=white',
     'https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB',
+    'https://img.shields.io/badge/react%20native-%2320232a.svg?logo=react&logoColor=%2361DAFB&color=blue',
+    'https://img.shields.io/badge/Next-black?logo=next.js&logoColor=white',
     'https://img.shields.io/badge/redux-%23563D7C.svg?logo=redux&logoColor=white',
     'https://img.shields.io/badge/jest-aa?logo=jest&color=red',
   ],

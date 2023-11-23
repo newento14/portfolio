@@ -51,7 +51,7 @@ export default function Home() {
               See works
             </motion.div>
           </Link>
-          <Link href={'/stack'} onClick={() => dispatch(addTab('/stack'))}>
+          <Link href={'/skills'} onClick={() => dispatch(addTab('/skills'))}>
             <motion.div
               initial={{y: 50, opacity: 0}}
               whileInView={{
@@ -65,7 +65,7 @@ export default function Home() {
               whileTap={{scale: 0.9}}
               transition={{type: "spring", stiffness: 400, damping: 17}}
               className="font-semibold text-[#333333] bg-purple w-fit px-8 py-2 rounded-md hover:bg-main hover:text-[#ffffff] border-[2px] border-purple max-sm:px-2">
-              See tech stack
+              See skills
             </motion.div>
           </Link>
         </div>
