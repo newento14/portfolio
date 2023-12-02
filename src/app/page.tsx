@@ -69,14 +69,6 @@ export default function Home() {
             </motion.div>
           </Link>
         </div>
-        <motion.div
-          initial={{x: -100, opacity: 0}}
-          animate={{x: 0, opacity: 1, transition: {type: "spring", duration: 1, delay: 1}}}
-          className="flex flex-col gap-y-2 mt-6 justify-center items-center"
-        >
-          <p className="text-xl font-semibold">Currently making Web Apps having</p>
-          <SlidingText/>
-        </motion.div>
       </div>
       <motion.div
         initial={{x: 150, opacity: 0}}

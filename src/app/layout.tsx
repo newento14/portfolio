@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Explorer from "@/components/Explorer";
 import {Providers} from "@/redux/Provider";
 import Tabs from "@/components/Tabs";
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({
       <main className={`${montserrat.className} w-full pl-[300px] pb-[26px] max-md:pl-[230px] max-md:pb-0 max-sm:pl-0`}>
         <Tabs/>
         {children}
+        <Analytics />
       </main>
       <Footer/>
     </Providers>

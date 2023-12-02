@@ -21,11 +21,7 @@ const Tab = ({index, fileName, selected}: TabProps) => {
 
   if (!selected) {
     return (
-      <motion.div
-        initial={{x: -50, opacity: 0}}
-        exit={{x: -50, opacity: 0, transition: {type: 'spring', duration: 0.2}}}
-        animate={{x: 0, opacity: 1, transition: {type: 'spring', duration: 0.6}}}
-        className='px-2 flex justify-between items-center w-[120px] h-full group'>
+      <div className='px-2 flex justify-between items-center w-[120px] h-full group'>
         <p className="truncate text-sm">{fileName}</p>
         <button className="hidden group-hover:block hover:bg-gray-700 rounded-md" onClick={(event) => {
           event.preventDefault()
@@ -39,16 +35,12 @@ const Tab = ({index, fileName, selected}: TabProps) => {
               d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"></path>
           </svg>
         </button>
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
-      initial={{x: '100%', opacity: 0}}
-      animate={{x: 0, opacity: 1, transition: {type: 'spring', duration: 0.6}}}
-
-      className='px-2 flex justify-between items-center w-[120px] h-full bg-main border-b-2 border-purple'>
+    <div className='px-2 flex justify-between items-center w-[120px] h-full bg-main border-b-2 border-purple'>
       <p className="truncate text-sm">{fileName}</p>
       <button className="hover:bg-gray-700 rounded-md" onClick={(event) => {
         event.preventDefault()
@@ -64,7 +56,7 @@ const Tab = ({index, fileName, selected}: TabProps) => {
             d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"></path>
         </svg>
       </button>
-    </motion.div>
+    </div>
   );
 };
 
