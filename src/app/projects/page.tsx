@@ -6,8 +6,8 @@ import {isClientSide} from "@/utils/isClientSide";
 import {addTab} from "@/redux/reducers/tabsSlice";
 
 export default function Page() {
+  const dispatch = useDispatch();
   if (isClientSide()) {
-    const dispatch = useDispatch();
     dispatch(addTab('/projects'));
   }
 

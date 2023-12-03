@@ -45,8 +45,8 @@ const imgUrls = [
 ]
 
 export default function Page() {
+  const dispatch = useDispatch();
   if (isClientSide()) {
-    const dispatch = useDispatch();
     dispatch(addTab('/skills'));
   }
 

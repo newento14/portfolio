@@ -4,8 +4,8 @@ import {addTab} from "@/redux/reducers/tabsSlice";
 import {isClientSide} from "@/utils/isClientSide";
 
 export default function Page() {
+  const dispatch = useDispatch();
   if (isClientSide()) {
-    const dispatch = useDispatch();
     dispatch(addTab('/readme'));
   }
 
