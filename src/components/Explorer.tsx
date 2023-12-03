@@ -78,13 +78,13 @@ const Explorer = () => {
                     alt="Icon file.jsx" loading="lazy"/>
                     <p>Skills.tsx</p></Link>
                   </li>
-                  <li className="text-purple font-semibold cursor-pointer"><Link href={'/works'}
+                  <li className="text-purple font-semibold cursor-pointer"><Link href={'/projects'}
                                                                                  className="flex items-center gap-x-1"
-                                                                                 onClick={() => dispatch(addTab('/works'))}><img
+                                                                                 onClick={() => dispatch(addTab('/projects'))}><img
                     className="h-[1.2em]"
                     src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_reactjs.svg"
                     alt="Icon file.jsx" loading="lazy"/>
-                    <p>Works.tsx</p></Link>
+                    <p>Projects.tsx</p></Link>
                   </li>
                 </ul>
               </li>

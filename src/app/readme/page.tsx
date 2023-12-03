@@ -1,10 +1,13 @@
 'use client'
 import {useDispatch} from "react-redux";
 import {addTab} from "@/redux/reducers/tabsSlice";
+import {isClientSide} from "@/utils/isClientSide";
 
 export default function Page() {
-  const dispatch = useDispatch();
-  dispatch(addTab('/readme'));
+  if (isClientSide()) {
+    const dispatch = useDispatch();
+    dispatch(addTab('/readme'));
+  }
 
   return (
     <div className="flex text-white justify-center items-center h-[80vh]">

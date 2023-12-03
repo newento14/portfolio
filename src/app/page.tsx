@@ -34,7 +34,7 @@ export default function Home() {
                    }} className="font-bold text-3xl w-fit">Yuriy Choboda
         </motion.h1>
         <div className="flex gap-x-4 text-[#333333]">
-          <Link href={'/works'} onClick={() => dispatch(addTab('/works'))}>
+          <Link href={'/works'} onClick={() => dispatch(addTab('/projects'))}>
             <motion.div
               initial={{y: 50, opacity: 0}}
               whileInView={{

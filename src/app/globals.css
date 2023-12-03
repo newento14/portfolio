@@ -14,3 +14,21 @@ body {
     background-color: #202020;
     color: #6e7a8e;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f588f9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f588f9;
+}
