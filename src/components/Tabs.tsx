@@ -34,9 +34,6 @@ const Tabs = () => {
   const [windowDimensions, setWindowDimensions] = useState({innerWidth: 0, innerHeight: 0});
   const [visible, setVisible] = useState(false);
 
-  console.log(windowDimensions)
-
-
   useEffect(() => {
     setWindowDimensions(getWindowSize())
     function handleResize(e: Event) {

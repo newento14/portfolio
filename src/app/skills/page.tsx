@@ -1,6 +1,8 @@
 'use client'
 import {motion} from "framer-motion";
 import TechnologyBlock from "@/components/TechnologyBlock";
+import {useDispatch} from "react-redux";
+import {addTab} from "@/redux/reducers/tabsSlice";
 
 const imgUrls = [
   [
@@ -42,6 +44,9 @@ const imgUrls = [
 ]
 
 export default function Page() {
+  const dispatch = useDispatch();
+  dispatch(addTab('/skills'));
+
   return (
     <div className="flex gap-y-8 flex-col text-[#e1dfdb] pt-[95px] justify-center items-center h-fit px-2">
       <motion.p initial={{x: 150, opacity: 0}} animate={{x: 0, opacity: 1, transition:{type: 'spring'}}} className="text-2xl font-bold ">TECH STACK:</motion.p>

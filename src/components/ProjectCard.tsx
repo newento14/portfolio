@@ -1,6 +1,7 @@
 'use client'
 import {motion} from "framer-motion";
 import React, {useState} from "react";
+import {useDispatch} from "react-redux";
 
 interface CardProps {
   delay: number,
@@ -40,7 +41,7 @@ const ProjectCard = ({delay, name, desc, github, link}: CardProps) => {
                   onHoverEnd={() => setHover(false)}
                   className="w-[300px] h-[300px] bg-secondary absolute rounded-3xl max-sm:w-[250px] max-sm:h-[250px] flex flex-col justify-between items-center p-4">
         <div>
-          <p className="font-semibold text-2xl">{name}</p>
+          <p className="font-semibold text-2xl mb-2">{name}</p>
           <p className="text-[#6e7a8e]">{desc}</p>
         </div>
         <div className="flex items-center justify-center gap-x-8">
