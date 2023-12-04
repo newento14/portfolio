@@ -2,7 +2,8 @@ interface IProject {
   name: string,
   desc: string,
   github: string,
-  link: string
+  link: string,
+  technologies?: JSX.Element,
 }
 
 const projects: IProject[] = [
@@ -10,13 +11,22 @@ const projects: IProject[] = [
     name: 'Lorian Store',
     desc: 'full-stack e-commerce store for selling clothes',
     github: 'https://github.com/newento14/clothes-ecom',
-    link: 'https://newento14-lorian-store.vercel.app/'
+    link: 'https://newento14-lorian-store.vercel.app/',
+    technologies: (
+      <div></div>
+    )
   },
   {
     name: 'MovieBoxd',
     desc: 'netflix like movie web site',
     github: 'https://github.com/newento14/MovieBoxd',
     link: 'https://newento14-movie-boxd-84a29fe206d9.herokuapp.com/'
+  },
+  {
+    name: 'Gymate',
+    desc: 'landing page for gym',
+    github: 'https://github.com/newento14/gym-landing-page',
+    link: 'https://gym-landing-page-opal.vercel.app/'
   },
   {
     name: 'Cloud storage',
