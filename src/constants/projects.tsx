@@ -88,6 +88,19 @@ const projects: IProject[] = [
     )
   },
   {
+    name: 'Sudoku',
+    desc: 'sudoku game with generation new puzzles',
+    github: 'https://github.com/newento14/sudoku',
+    link: 'https://sudoku-sandy.vercel.app/',
+    technologies: (
+      <>
+        <Image src={React} alt={'React.js'} title={'React.js'} />
+        <Image src={Redux} alt={'Redux'} title={'Redux'} />
+        <Image src={Typescript} alt={'TypeScript'} title={'TypeScript'} />
+      </>
+    )
+  },
+  {
     name: 'WeatherApp 🤓',
     desc: 'web program for displaying weather based on data from the OpenWeather API',
     github: 'https://github.com/newento14/weather-app',
